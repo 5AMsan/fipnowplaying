@@ -1,13 +1,14 @@
 {
   "name": "FipNowPlaying",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Parse FIP webradio stream info",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "5AMsan",
-  "license": "ISC",
+  "author": "5AMsan <kurushii@gmail.com>",
+  "license": "MIT",
+  "repository":"5AMsan/fipnowplaying",
   "volumio_info": {
     "prettyName": "FipNowPlaying",
     "icon": "fa-feed",
@@ -15,6 +16,6 @@
     "boot_priority":1
   },
   "dependencies": {
-    "socket.io-client": "^1.4.6",
+    "socket.io-client": "^1.4.6"
   }
 }
