@@ -43,12 +43,14 @@ fipNowPlaying.prototype.setupListeners = function() {
 	, function (connWebSocket) {
 		
 		self.libSocketIO.on('pushState', function (state) {
-			console.log(JSON.stringify(state));
+			
 			if (state.service=="webradio" && self.stream.test(state.title)) {
-				self.commandRouter.pushConsoleMessage('FNP requests state')
+				// should place ticker here
+				var metadata = self.getMetadata
+				self.commandRouter.pushConsoleMessage(JSON.stringify(metadata))
 			}
 			else {
-				self.commandRouter.pushConsoleMessage('FNP requests failed')
+				// should remove ticker here
 			}
 	});
 
@@ -72,8 +74,6 @@ fipNowPlaying.prototype.getMetadata = function() {
 		self.currentTrack.album = step.titreAlbum
 		self.currentTrack.annee = step.anneeEditionMusique
 		self.currentTrack.albumArt = step.visual
-		
-		console.log(self.currentTrack)
 		
 		return self.currentTrack
 	});
