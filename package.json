@@ -16,6 +16,9 @@
     "boot_priority":1
   },
   "dependencies": {
-    "socket.io-client": "^1.4.6"
+    "socket.io-client": "latest",
+	"request": "latest",
+    "kew": "^0.7.0",
+    "v-conf": "^0.10.0"
   }
 }
